@@ -86,7 +86,7 @@
             const words = [
                 'Mohamed Khaled',
                 'Full Stack Developer',
-                'Laravel Developer',
+                'Backend Software Engineer',
                 'TALL Stack Developer',
                 'Software Engineer',
             ];
