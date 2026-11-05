@@ -4,348 +4,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Developer Portfolio</title>
-    <link rel="stylesheet" href="app.css">
+    <meta name="description" content="Muhammed Khaled is a full-stack developer specializing in Laravel, Livewire, Alpine.js, and scalable web applications.">
+    <meta name="theme-color" content="#43141C">
+    <title>Muhammed Khaled | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
         <div class="container">
-            <nav>
-                <div class="logo">Muhammed Khaled </div>
-                <div class="mobile-menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-links">
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a class="brand" href="#home" aria-label="Muhammed Khaled, home">
+                    <span class="brand-mark" aria-hidden="true">MK</span>
+                    <span>Muhammed Khaled</span>
+                </a>
+                <button class="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu">
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+                </button>
+                <ul class="nav-links" id="primary-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>I'm <span class="typed-text"></span></h1>
-                    <p>Building robust, scalable web applications with modern technologies. Specialized in Laravel,
-                        Alpine.js, Livewire, and Tailwind CSS solutions.</p>
-                    <a href="#projects" class="btn">View My Work</a>
+    <main id="main-content">
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container hero-layout">
+                <div class="hero-copy" data-reveal>
+                    <p class="availability"><span aria-hidden="true"></span> Based in Cairo, building for the web</p>
+                    <h1 id="hero-title">Muhammed<br><span>Khaled.</span></h1>
+                    <p class="hero-role">Full-Stack Developer <span aria-hidden="true">/</span> <span class="typed-text" data-roles="Backend Software Engineer,TALL Stack Developer,Software Engineer">Backend Software Engineer</span></p>
+                    <p class="hero-intro">Building robust, scalable web applications with modern technologies. Specialized in Laravel, Alpine.js, Livewire, and Tailwind CSS solutions.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Explore my work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Start a conversation</a>
+                    </div>
                 </div>
-                <div class="hero-image">
-                    <img src="40d7e8be-8907-49f8-b607-769c8fb5aec4 (1).jpg"
-                        alt="Muhammed Khaled - Full Stack Developer" />
+
+                <figure class="hero-portrait" data-reveal>
+                    <div class="portrait-frame">
+                        <img src="40d7e8be-8907-49f8-b607-769c8fb5aec4 (1).jpg" alt="Muhammed Khaled outdoors, smiling at the camera" width="1200" height="1600">
+                    </div>
+                    <figcaption><span>Full-stack development</span><span>Laravel / TALL stack</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="about" class="section section-light" aria-labelledby="about-title">
+            <div class="container about-layout">
+                <div class="section-heading" data-reveal>
+                    <h2 id="about-title">Thoughtful systems.<br>Useful experiences.</h2>
+                    <p>I build dependable web products from backend architecture through the interface people use.</p>
+                </div>
+                <div class="about-copy" data-reveal>
+                    <p>I'm a full-stack developer with extensive experience building web applications using modern technologies. My focus is on creating robust, scalable, and user-friendly solutions that solve real business problems.</p>
+                    <p>With expertise in the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire) and experience with both SQL and NoSQL databases, I deliver high-performance applications tailored to my clients' needs.</p>
+                    <p>I'm passionate about clean code, intuitive UX/UI, and staying current with the latest industry trends and best practices.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div>
-                    <p>I'm a full-stack developer with extensive experience building web applications using modern
-                        technologies. My focus is on creating robust, scalable, and user-friendly solutions that solve
-                        real business problems.</p>
-                    <p>With expertise in the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire) and experience with
-                        both SQL and NoSQL databases, I deliver high-performance applications tailored to my clients'
-                        needs.</p>
-                    <p>I'm passionate about clean code, intuitive UX/UI, and staying current with the latest industry
-                        trends and best practices.</p>
+            <div class="container skills-block" data-reveal>
+                <div class="skills-intro">
+                    <h3>Technical skills</h3>
+                    <p>A practical toolkit for building, shipping, and maintaining modern applications.</p>
                 </div>
-                <div>
-                    <h3>Technical Skills</h3>
-                    <ul class="skills-list">
-                        <li>Laravel</li>
-                        <li>Tailwind CSS</li>
-                        <li>Alpine.js</li>
-                        <li>Livewire</li>
-                        <li>Filament</li>
-                        <li>VPS Management</li>
-                        <li>SQL</li>
-                        <li>NoSQL</li>
-                        <li>CI/CD</li>
-                        <li>Git</li>
-                        <li>Responsive Design</li>
-                        <li>API Development</li>
-                    </ul>
+                <ul class="skills-list" aria-label="Technical skills">
+                    <li>Laravel</li><li>Tailwind CSS</li><li>Alpine.js</li><li>Livewire</li><li>Filament</li><li>VPS Management</li><li>SQL</li><li>NoSQL</li><li>CI/CD</li><li>Git</li><li>Responsive Design</li><li>API Development</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="projects-heading" data-reveal>
+                    <h2 id="projects-title">Selected work</h2>
+                    <p>Production platforms across commerce, fintech, healthcare, careers, education, services, and operations. Each entry highlights the systems and integrations behind the product.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card project-card-featured">
+                        <div class="project-index" aria-hidden="true">01</div>
+                        <div class="project-content">
+                            <h3>Seena Intel</h3>
+                            <p>A BNPL market intelligence platform that connects merchants to payment providers such as Tabby, Tamara, and valU. It aggregates approval and performance data, then surfaces hidden lost sales and revenue opportunities across the payment landscape.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel Backend</li><li>Livewire</li><li>MySQL</li><li>Redis</li><li>Queue</li><li>Jobs</li><li>Payment Provider APIs (Tabby, Tamara, valU)</li><li>Data Analytics</li></ul>
+                            <div class="project-links">
+                                <a href="https://intel.seenapay.com/" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-index" aria-hidden="true">02</div>
+                        <div class="project-content">
+                            <h3>Seena Tienda</h3>
+                            <p>A multi-vendor ecommerce marketplace serving Egypt, Saudi Arabia, and the UAE. It supports merchant onboarding, multi-currency shopping, and installment checkout through valU, Aman, and TRU.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel</li><li>Livewire</li><li>Filament</li><li>MySQL</li><li>Multi-vendor</li><li>Multi-currency</li><li>Payment Integration (valU, Aman, TRU)</li><li>Queue</li><li>Redis</li></ul>
+                            <div class="project-links">
+                                <a href="https://seenatienda.com" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-index" aria-hidden="true">03</div>
+                        <div class="project-content">
+                            <h3>SeenaPay</h3>
+                            <p>A healthcare and cosmetic surgery booking app. Patients can find doctors, book consultations, shop beauty products, and pay for procedures in installments through multiple financing options.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel Backend</li><li>MySQL</li><li>FCM</li><li>Queue</li><li>Jobs</li><li>Payment Integration (valU, Aman, CIB, NBE, Banque Misr)</li><li>E-commerce</li></ul>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.RKAnjel.SeenaPay&amp;hl=en" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-wide">
+                        <div class="project-index" aria-hidden="true">04</div>
+                        <div class="project-content">
+                            <h3>HATRX</h3>
+                            <p>A football pitch booking platform for players and pitch owners. Players discover nearby pitches, check real-time availability, and book in seconds, while owners manage schedules and reservations from a single dashboard.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel Backend</li><li>Livewire</li><li>Filament</li><li>MySQL</li><li>FCM</li><li>Queue</li><li>Jobs</li><li>Real-time Availability</li><li>Booking System</li></ul>
+                            <div class="project-links">
+                                <a href="https://www.hatrx.app/" target="_blank" rel="noopener noreferrer" class="project-link">View site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.sporta.app.bundleid" target="_blank" rel="noopener noreferrer" class="project-link">Get the app <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-featured">
+                        <div class="project-index" aria-hidden="true">05</div>
+                        <div class="project-content">
+                            <h3>Kenooz</h3>
+                            <p>Gold ecommerce platform. Uncover a meticulously curated array of exquisite gold products.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Backend Laravel</li><li>Livewire Dashboard</li><li>MySQL</li><li>Payment Integration</li><li>FCM</li><li>Queues</li></ul>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.Hossam_x_studios_Kenooz" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-index" aria-hidden="true">06</div>
+                        <div class="project-content">
+                            <h3>Auto Mark</h3>
+                            <p>Expect your usual quality service in selling, buying your used car and evaluating your car. Your car will be inspected by qualified certified technicians.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel Backend</li><li>Filament</li><li>MySQL</li><li>FCM</li><li>Queues</li><li>Cache</li></ul>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.secItDevelopers.auto_mark_app&amp;pcampaignid=web_share&amp;pli=1" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-index" aria-hidden="true">07</div>
+                        <div class="project-content">
+                            <h3>Career 180</h3>
+                            <p>An innovative platform connecting job seekers with employers, featuring personalized career development tools.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>TALL Stack</li><li>Filament</li><li>MySQL</li><li>Queue</li><li>Jobs</li><li>Cache</li><li>Payment Integration (Kashier, EasyKash, PayMob)</li></ul>
+                            <div class="project-links">
+                                <a href="https://career-180.com/en/home" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-wide">
+                        <div class="project-index" aria-hidden="true">08</div>
+                        <div class="project-content">
+                            <h3>Freelance Yard</h3>
+                            <p>A marketplace platform that connects freelancers with clients, featuring secure payment processing and project management.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel</li><li>Filament</li><li>MySQL</li><li>Alpine.js</li><li>Queue</li><li>Jobs</li><li>Payment Integration (Kashier)</li><li>OCR Integration</li></ul>
+                            <div class="project-links">
+                                <a href="https://www.freelanceyard.com/ar/home" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-index" aria-hidden="true">09</div>
+                        <div class="project-content">
+                            <h3>Boutique Yamen</h3>
+                            <p>An e-commerce platform for a boutique retail store, featuring inventory management and secure checkout.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel Backend</li><li>Laravel Inertia.js</li><li>MySQL</li><li>FCM</li><li>Redis</li><li>Database Optimization</li></ul>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.boutique.user.yearex.boutique_user&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-index" aria-hidden="true">10</div>
+                        <div class="project-content">
+                            <h3>Matloub</h3>
+                            <p>An application to easily request your service and speak directly with the service owner for free without any fees.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel Backend</li><li>MySQL</li><li>FCM</li><li>Queue</li><li>Jobs</li><li>Social Integrations</li><li>Laravel Reverb</li></ul>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.matloub.applaitech" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-wide">
+                        <div class="project-index" aria-hidden="true">11</div>
+                        <div class="project-content">
+                            <h3>The Shack</h3>
+                            <p>Welcome to The Shack, your go-to app for the finest smoked meat products in Canada! Whether you're a fan of succulent brisket, savory smoked chicken, or perfectly grilled sausages, The Shack has got you covered. Our easy-to-use app brings the best of our smoked meat delicacies straight to your doorstep with just a few taps on your screen.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel Backend</li><li>MySQL</li><li>FCM</li><li>Queue</li><li>Jobs</li><li>Social Integrations</li><li>Laravel Reverb</li></ul>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.sixamtech.Shack" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-index" aria-hidden="true">12</div>
+                        <div class="project-content">
+                            <h3>Muzzain</h3>
+                            <p>Muzain is the first comprehensive management system designed specifically for beauty salons and spa centers across Egypt and the Middle East. It brings together all essential management tools in one platform, helping business owners organize their operations with ease and providing full control over multiple branches from a single account.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel Backend</li><li>MySQL</li><li>FCM</li><li>Queue</li><li>Jobs</li><li>Social Integrations</li><li>Laravel Reverb</li><li>Smart Booking System</li></ul>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.muzain.business.test_handle" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-index" aria-hidden="true">13</div>
+                        <div class="project-content">
+                            <h3>HADI University</h3>
+                            <p>An educational platform for HADI University, featuring course management and student enrollment functionalities.</p>
+                            <ul class="tech-stack" aria-label="Technologies used"><li>Laravel</li><li>Livewire</li><li>Filament</li><li>MySQL</li></ul>
+                            <div class="project-links">
+                                <a href="https://huc.edu.iq/ar" target="_blank" rel="noopener noreferrer" class="project-link">View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+                                <span class="source-note">Source not publicly listed</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <p>Here are some of the projects I've worked on. Each one presented unique challenges that I solved with my
-                technical expertise.</p>
-
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-img">Kenooz</div>
-                    <div class="project-content">
-                        <h3>Kenooz</h3>
-                        <p>Gold ecommerce platform. Uncover a meticulously curated array of exquisite gold products.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Backend Laravel</span>
-                            <span class="tech-tag">Livewire Dashboard</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Payment Integration</span>
-                            <span class="tech-tag">FCM</span>
-                            <span class="tech-tag">Queues</span>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.Hossam_x_studios_Kenooz" class="btn"
-                            target="_blank">View Demo</a>
-                    </div>
+        <section id="experience" class="section section-light experience-section" aria-labelledby="experience-title">
+            <div class="container experience-layout">
+                <div class="section-heading" data-reveal>
+                    <h2 id="experience-title">Experience</h2>
+                    <p>The work above reflects hands-on delivery across commerce, services, education, and operational platforms.</p>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-img">Auto Mark</div>
-                    <div class="project-content">
-                        <h3>Auto Mark</h3>
-                        <p>Expect your usual quality service in selling, buying your used car and evaluating your car.
-                            Your car will be inspected by qualified certified technicians.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel Backend</span>
-                            <span class="tech-tag">Filament</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">FCM</span>
-                            <span class="tech-tag">Queues</span>
-                            <span class="tech-tag">Cache</span>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.secItDevelopers.auto_mark_app&pcampaignid=web_share&pli=1"
-                            target="_blank" class="btn">View Demo</a>
-                    </div>
-                </div>
-
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-img">Career 180</div>
-                    <div class="project-content">
-                        <h3>Career 180</h3>
-                        <p>An innovative platform connecting job seekers with employers, featuring personalized career
-                            development tools.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">TALL Stack</span>
-                            <span class="tech-tag">Filament</span>
-                            <span class="tech-tag">Mysql</span>
-                            <span class="tech-tag">Queue</span>
-                            <span class="tech-tag">Jobs</span>
-                            <span class="tech-tag">Cache</span>
-                            <span class="tech-tag">Payment Integration (Kashier, EasyKash, PayMob)</span>
-                        </div>
-                        <a href="https://career-180.com/en/home" class="btn" target="_blank">View Demo</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-img">Freelance Yard</div>
-                    <div class="project-content">
-                        <h3>Freelance Yard</h3>
-                        <p>A marketplace platform that connects freelancers with clients, featuring secure payment
-                            processing and project management.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">Filament</span>
-                            <span class="tech-tag">MySql</span>
-                            <span class="tech-tag">Alpine.js</span>
-                            <span class="tech-tag">Queue</span>
-                            <span class="tech-tag">Jobs</span>
-                            <span class="tech-tag">Payment Integration (Kashier)</span>
-                            <span class="tech-tag">OCR Integration</span>
-                        </div>
-                        <a href="https://www.freelanceyard.com/ar/home" class="btn" target="_blank">View Demo</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-img">Boutique Yamen</div>
-                    <div class="project-content">
-                        <h3>Boutique Yamen</h3>
-                        <p>An e-commerce platform for a boutique retail store, featuring inventory management and secure
-                            checkout.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel Backend</span>
-                            <span class="tech-tag">Laravel Inertia js</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">FCM</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">Database optimization</span>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.boutique.user.yearex.boutique_user&pcampaignid=web_share"
-                            target="_blank" class="btn">View Demo</a>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-img">matloub</div>
-                    <div class="project-content">
-                        <h3>Matloub</h3>
-                        <p>An application to easily request your service and speak directly with the service owner for
-                            free without any fees</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel Backend</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">FCM</span>
-                            <span class="tech-tag">Queue</span>
-                            <span class="tech-tag">Jobs</span>
-                            <span class="tech-tag">Social integrations</span>
-                            <span class="tech-tag">Laravel Reverb</span>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.matloub.applaitech" target="_blank"
-                            class="btn">View Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img">The Shack</div>
-                    <div class="project-content">
-                        <h3>The Shack</h3>
-                        <p>Welcome to The Shack, your go-to app for the finest smoked meat products in Canada! Whether
-                            you're a fan of succulent brisket, savory smoked chicken, or perfectly grilled sausages, The
-                            Shack has got you covered. Our easy-to-use app brings the best of our smoked meat delicacies
-                            straight to your doorstep with just a few taps on your screen.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel Backend</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">FCM</span>
-                            <span class="tech-tag">Queue</span>
-                            <span class="tech-tag">Jobs</span>
-                            <span class="tech-tag">Social integrations</span>
-                            <span class="tech-tag">Laravel Reverb</span>
-
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.sixamtech.Shack" target="_blank"
-                            class="btn">View Demo</a>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-img">Muzzain</div>
-                    <div class="project-content">
-                        <h3>Muzzain</h3>
-                        <p>muzain is the first comprehensive management system designed specifically for beauty salons
-                            and spa centers across Egypt and the Middle East. It brings together all essential
-                            management tools in one platform,
-                            helping business owners organize their operations with ease and providing full control over
-                            multiple branches from a single account.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel Backend</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">FCM</span>
-                            <span class="tech-tag">Queue</span>
-                            <span class="tech-tag">Jobs</span>
-                            <span class="tech-tag">Social integrations</span>
-                            <span class="tech-tag">Laravel Reverb</span>
-                            <span class="tech-tag">Smart booking system</span>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.muzain.business.test_handle"
-                            target="_blank" class="btn">View Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img">HADI UNI</div>
-                    <div class="project-content">
-                        <h3>HADI University</h3>
-                        <p>
-                            An educational platform for HADI University, featuring course management and student
-                            enrollment functionalities.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">Livewire</span>
-                            <span class="tech-tag">Filament</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <a href="https://huc.edu.iq/ar" target="_blank" class="btn">View Demo</a>
+                <div class="experience-placeholder" data-reveal>
+                    <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+                    <div>
+                        <h3>Employment history</h3>
+                        <p><strong>Details not provided yet.</strong> A verified role and company timeline will appear here when available.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Feel free to reach out for collaborations, project inquiries, or just to say hello. I'm always open to
-                discussing new opportunities.</p>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <a href="mailto:mohamedkhaled25179@gmail.com">mohamedkhaled25179@gmail.com</a>
+        <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="contact-heading" data-reveal>
+                    <h2 id="contact-title">Have a project in mind?</h2>
+                    <p>I'm open to collaborations, project inquiries, and new opportunities. Tell me what you're building.</p>
+                    <a href="mailto:mohamedkhaled25179@gmail.com" class="btn btn-primary">Email me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <a href="tel:+201286955720">+20 128 695 5720</a>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Location</h3>
-                    <p>Cairo, Egypt</p>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/mohamed-elseadey-715bb7241/" target="_blank">Mohamed
-                        Elseadey</a>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/MuhammedKkhaled" target="_blank">@MuhammedKkhaled</a>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <a href="https://wa.me/201286955720" target="_blank">Message Me</a>
-                </div>
+                <address class="contact-grid" data-reveal>
+                    <a href="mailto:mohamedkhaled25179@gmail.com" class="contact-item"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>Email</span><strong>mohamedkhaled25179@gmail.com</strong></a>
+                    <a href="tel:+201286955720" class="contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Phone</span><strong>+20 128 695 5720</strong></a>
+                    <div class="contact-item"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Location</span><strong>Cairo, Egypt</strong></div>
+                    <a href="https://www.linkedin.com/in/mohamed-elseadey-715bb7241/" target="_blank" rel="noopener noreferrer" class="contact-item"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span><strong>Mohamed Elseadey <span class="sr-only">(opens in a new tab)</span></strong></a>
+                    <a href="https://github.com/MuhammedKkhaled" target="_blank" rel="noopener noreferrer" class="contact-item"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span><strong>@MuhammedKkhaled <span class="sr-only">(opens in a new tab)</span></strong></a>
+                    <a href="https://wa.me/201286955720" target="_blank" rel="noopener noreferrer" class="contact-item"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span><strong>Message me <span class="sr-only">(opens in a new tab)</span></strong></a>
+                </address>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <ul class="social-links">
-                <li><a href="https://github.com/MuhammedKkhaled" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/mohamed-elseadey-715bb7241/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a></li>
-            </ul>
-            <p>&copy; 2025 Muhammed Khaled. All Rights Reserved .</p>
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <p>&copy; <span id="current-year">2025</span> Muhammed Khaled. All rights reserved.</p>
+            <div class="social-links" aria-label="Social links">
+                <a href="https://github.com/MuhammedKkhaled" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-elseadey-715bb7241/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
+            <a class="back-to-top" href="#home">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
         </div>
     </footer>
 
     <script src="app.js"></script>
 </body>
-
 </html>

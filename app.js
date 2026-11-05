@@ -1,88 +1,94 @@
-// Mobile menu functionality
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const menuButton = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
+const navAnchors = [...document.querySelectorAll('.nav-links a')];
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenuBtn.classList.toggle('active');
-    navLinks.classList.toggle('active');
+function closeMenu(restoreFocus = false) {
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation menu');
+    navLinks.classList.remove('active');
+    document.body.classList.remove('menu-open');
+
+    if (restoreFocus) menuButton.focus();
+}
+
+menuButton.addEventListener('click', () => {
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+    navLinks.classList.toggle('active', !isOpen);
+    document.body.classList.toggle('menu-open', !isOpen);
+
+    if (!isOpen) navAnchors[0].focus();
 });
 
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenuBtn.classList.remove('active');
-        navLinks.classList.remove('active');
-    });
+navAnchors.forEach((link) => link.addEventListener('click', () => closeMenu()));
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeMenu(true);
+    }
+
+    if (event.key === 'Tab' && navLinks.classList.contains('active')) {
+        const focusable = [menuButton, ...navAnchors];
+        const first = focusable[0];
+        const last = focusable.at(-1);
+
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
+    }
 });
 
-// Smooth scroll behavior for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+const revealItems = document.querySelectorAll('[data-reveal]');
+
+if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+} else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
         });
-    });
-});
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
 
-// TypeWriter Class
-class TypeWriter {
-    constructor(txtElement, words, wait = 3000) {
-        this.txtElement = txtElement;
-        this.words = words;
-        this.txt = '';
-        this.wordIndex = 0;
-        this.wait = parseInt(wait, 10);
-        this.type();
-        this.isDeleting = false;
-    }
-
-    type() {
-        const current = this.wordIndex % this.words.length;
-        const fullTxt = this.words[current];
-
-        if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.txtElement.innerHTML = `<span>${this.txt}</span>`;
-
-        let typeSpeed = 100;
-
-        if (this.isDeleting) {
-            typeSpeed *= 2;
-        }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-            typeSpeed = this.wait;
-            this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.wordIndex++;
-            typeSpeed = 500;
-        }
-
-        setTimeout(() => this.type(), typeSpeed);
-    }
+    revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-// Init on DOM load
-document.addEventListener('DOMContentLoaded', init);
+const sections = document.querySelectorAll('main section[id]');
+const navById = new Map(navAnchors.map((link) => [link.getAttribute('href').slice(1), link]));
 
-function init() {
-    const txtElement = document.querySelector('.typed-text');
-    const words = [
-        'Mohamed Khaled',
-        'Full Stack Developer', 
-        'Backend Software Engineer',
-        'TALL Stack Developer',
-        'Software Engineer',
-    ];
-    const wait = 2000;
+if ('IntersectionObserver' in window) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        const visibleSection = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-    if (txtElement) {
-        new TypeWriter(txtElement, words, wait);
-    }
+        if (!visibleSection) return;
+
+        navAnchors.forEach((link) => link.removeAttribute('aria-current'));
+        navById.get(visibleSection.target.id)?.setAttribute('aria-current', 'true');
+    }, { rootMargin: '-25% 0px -60% 0px', threshold: [0, 0.2, 0.6] });
+
+    sections.forEach((section) => sectionObserver.observe(section));
 }
+
+const rotatingRole = document.querySelector('.typed-text');
+
+if (rotatingRole && !prefersReducedMotion) {
+    const roles = rotatingRole.dataset.roles.split(',');
+    let roleIndex = 0;
+
+    window.setInterval(() => {
+        roleIndex = (roleIndex + 1) % roles.length;
+        rotatingRole.textContent = roles[roleIndex];
+    }, 2800);
+}
+
+document.querySelector('#current-year').textContent = new Date().getFullYear();
