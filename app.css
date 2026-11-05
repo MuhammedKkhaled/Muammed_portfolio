@@ -638,6 +638,8 @@ h3 { line-height: 1.2; }
 
 .experience-placeholder p { margin-bottom: 0; }
 
+.experience-placeholder .btn { margin-top: 1.4rem; }
+
 .contact-section {
     color: var(--white);
     background: var(--burgundy);
